@@ -4,11 +4,8 @@ pipeline {
 
     stages {
 
-        stage('Build') {
-            steps { 
-                sh './mvnw clean'
-                archiveArtifacts artifacts: '*.jar', fingerprint: true
-            }
+        stage('Testing') {
+            sh 'echo ${env.BUILD_ID} ${env.BUILD_NUMBER}'
         }
 
     }
