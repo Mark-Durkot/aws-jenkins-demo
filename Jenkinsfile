@@ -16,4 +16,16 @@ pipeline {
 
     }
 
+    post {
+
+        always {
+            sh 'echo ALWAYS'
+        }
+
+        failure {
+            sh 'echo FAILURE'
+        }
+
+    }
+
 }
