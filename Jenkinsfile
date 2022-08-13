@@ -2,11 +2,15 @@ pipeline {
     
     agent any
 
+    environment {
+        MY_VARIABLE = 'Mark Durkot'
+    }
+
     stages {
 
         stage('Testing') {
             steps {
-                echo "${env.BUILD_ID} ${env.BUILD_NUMBER}"
+                echo "${MY_VARIABLE}"
             }
         }
 
