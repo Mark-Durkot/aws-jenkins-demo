@@ -6,7 +6,7 @@ pipeline {
 
         stage('Testing') {
             steps {
-                echo '${env.BUILD_ID} ${env.BUILD_NUMBER}'
+                echo "${env.BUILD_ID} ${env.BUILD_NUMBER}"
             }
         }
 
