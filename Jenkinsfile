@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps { 
                 sh './mvnw clean'
-                //archiveArtifacts artifacts: "**/target/*.jar", fingerprint: true
+                archiveArtifacts artifacts: '*SNAPSHOT.jar', fingerprint: true
             }
         }
 
