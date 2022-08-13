@@ -11,6 +11,7 @@ pipeline {
         stage('Testing') {
             steps {
                 sh 'echo $MY_VARIABLE'
+                acricher
             }
         }
 
