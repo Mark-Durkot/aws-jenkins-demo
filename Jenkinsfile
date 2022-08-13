@@ -6,25 +6,17 @@ pipeline {
         MY_VARIABLE = 'Mark Durkot'
     }
 
-    stages {
-
-        stage('Testing') {
-            steps {
-                sh 'echo $MY_VARIABLE'
-            }
-        }
-
+    tools {
+        maven 'maven-3.6.3' 
     }
 
-    post {
+    stages {
 
-        always {
-            sh 'echo ALWAYS'
-        }
-
-        failure {
-            sh 'echo FAILURE'
-        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean'
+            }
+        }   
 
     }
 
