@@ -5,7 +5,9 @@ pipeline {
     stages {
 
         stage('Testing') {
-            sh 'echo ${env.BUILD_ID} ${env.BUILD_NUMBER}'
+            steps {
+                sh 'echo ${env.BUILD_ID} ${env.BUILD_NUMBER}'
+            }
         }
 
     }
