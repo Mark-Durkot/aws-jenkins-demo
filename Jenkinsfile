@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps { 
                 sh './mvnw clean'
-                arciveArticatcs artifacts: "**/target/*.jar", fingerprint: true
+                archiveArticatcs artifacts: "**/target/*.jar", fingerprint: true
             }
         }
 
