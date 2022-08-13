@@ -10,7 +10,7 @@ pipeline {
 
         stage('Testing') {
             steps {
-                sh 'printenv'
+                sh 'echo $MY_VARIABLE'
             }
         }
 
