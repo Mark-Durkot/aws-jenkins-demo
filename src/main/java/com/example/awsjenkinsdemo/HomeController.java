@@ -10,7 +10,6 @@ public class HomeController {
 
     @GetMapping
     public String home() {
-        s;
         return "Welcome to AWS deployed by Jenkins";
     }
 
