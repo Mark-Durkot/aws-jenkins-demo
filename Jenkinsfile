@@ -30,7 +30,7 @@ pipeline {
 
                     // run the startup.sh script on remote EC2 instance using ssh
                     echo 'running...'
-                    sh "ssh -o StrictHostKeyChecking=no -i ${KEYS} ec2-user@ec2-52-54-168-66.compute-1.amazonaws.com 'bash -s' < startup.sh"
+                    sh "ssh -o StrictHostKeyChecking=no -i ${KEYS} ec2-user@ec2-184-72-154-42.compute-1.amazonaws.com 'bash -s' < startup.sh"
                 }
             }
         }
