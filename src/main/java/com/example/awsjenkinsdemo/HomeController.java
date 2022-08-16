@@ -18,4 +18,9 @@ public class HomeController {
         return "Ohh shit this is home 2";
     }
 
+    @GetMapping("/home3")
+    public String home3() {
+        return "Oh shit this is home 3";
+    }
+
 }
