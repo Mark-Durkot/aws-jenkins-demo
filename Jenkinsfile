@@ -21,11 +21,13 @@ pipeline {
         }
 
         stage('Deploy') {
-            // steps {
-            //     // copy the artifact to remote EC2 instance using ssh and scp
+            steps {
+                // copy the artifact to remote EC2 instance using ssh and scp
 
-            //     // run the startup.sh script on remote EC2 instance using ssh
-            // }
+                // run the startup.sh script on remote EC2 instance using ssh
+
+                echo 'Deploy stage to be done'
+            }
         }
 
     }
