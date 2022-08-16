@@ -13,4 +13,9 @@ public class HomeController {
         return "Welcome to AWS deployed by Jenkins";
     }
 
+    @GetMapping("/home2")
+    public String home2() {
+        return "Ohh shit this is home 2";
+    }
+
 }
