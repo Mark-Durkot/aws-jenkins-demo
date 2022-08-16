@@ -26,7 +26,7 @@ pipeline {
                 withCredentials([file(credentialsId: 'server-app-instance-keys', variable: 'KEYS')]) {
                     // copy the artifact to remote EC2 instance using ssh and scp
                     echo 'copying...'
-                    sh "scp -o StrictHostKeyChecking=no -i ${KEYS} target.*jar ec2-user@ec2-52-54-168-66.compute-1.amazonaws.com:~"
+                    sh "scp -o StrictHostKeyChecking=no -i ${KEYS} target/*.jar ec2-user@ec2-52-54-168-66.compute-1.amazonaws.com:~"
 
                     // run the startup.sh script on remote EC2 instance using ssh
                     echo 'running...'
