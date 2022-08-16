@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn package -DSkipTests'
-                archiveArtifact artifact: '**/target/*.jar'
+                archiveArtifacts artifacts: '**/target/*.jar'
             }
         }   
 
