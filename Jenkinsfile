@@ -32,8 +32,6 @@ pipeline {
                     echo 'running...'
                     sh "ssh -o StrictHostKeyChecking=no -i ${KEYS} ec2-user@ec2-52-54-168-66.compute-1.amazonaws.com 'bash -s' < startup.sh"
                 }
-
-                echo 'Deploy stage to be done'
             }
         }
 
